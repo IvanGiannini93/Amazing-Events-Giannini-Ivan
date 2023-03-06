@@ -29,5 +29,16 @@ for (let i = 0; i < eventsData.length; i++) {
 cardsContainer.appendChild(fragment);
 
 
+const checkboxes = document.querySelectorAll('input[type=checkbox]');
+console.log(checkboxes);
 
+checkboxes.forEach( checkbox  => { 
+    checkbox.addEventListener('change', mostrarSeleccionados) 
+    })
 
+function mostrarSeleccionados(){
+    let inputsSeleccionados = Array.from(checkboxes).filter(checkbox => checkbox.checked);
+    console.log(inputsSeleccionados);
+}
+
+mostrarSeleccionados();
