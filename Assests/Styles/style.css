@@ -7,7 +7,7 @@
 
 header {
     /* height: 15vh; */
-    background-image: url('../img/banner.png');
+    /* background-image: url('../img/banner.png'); */
 }
 
 main {
@@ -81,7 +81,7 @@ li {
 
 .contenedor-details{
     border: 3px solid black;
-    height: 300px;
+    height: 50%;
     gap: 1rem;
 }
 
