@@ -55,11 +55,11 @@
         </div>
         <section class="d-flex flex-column align-items-center">
             <div class="pt-3 d-flex flex-column  contenedor-tablas">
-                <div>
-                    <table class="table table-bordered table-stats bg-white">
+                <div id="table1">
+                    <!-- <table class="table table-bordered table-stats bg-white">
                         <thead>
                             <tr>
-                                <th scope="col" colspan="3">Events statistics</th>
+                                <th scope="col" colspan="3"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -74,77 +74,33 @@
                                 <td>|</td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table> -->
                 </div>
                 <div>
                     <table class="table table-bordered table-stats bg-white">
+                        <h4>Upcoming events statistics by category</h4>
                         <thead>
                             <tr>
-                                <th scope="col" colspan="3">Upcoming events statistics by category</th>
+                                <th>Categories</th>
+                                <th>Revenues</th>
+                                <th>Percentage of attendance</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Categories</td>
-                                <td>Revenues</td>
-                                <td>Percentage of attendance</td>
-                            </tr>
-                            <tr>
-                                <td>|</td>
-                                <td>|</td>
-                                <td>|</td>
-                            </tr>
-                            <tr>
-                                <td>|</td>
-                                <td>|</td>
-                                <td>|</td>
-                            </tr>
-                            <tr>
-                                <td>|</td>
-                                <td>|</td>
-                                <td>|</td>
-                            </tr>
+                        <tbody id="table2">
                         </tbody>
                     </table>
                 </div>
                 <div>
                     <table class="table table-bordered table-stats bg-white">
+                        <h4>Past Events statistics by category</h4>
                         <thead>
                             <tr>
-                                <th scope="col" colspan="3">Past Events statistics by category</th>
+                                <th>Categories</th>
+                                <th>Revenues</th>
+                                <th>Percentage of attendance</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Categories</td>
-                                <td>Revenues</td>
-                                <td>Percentage of attendance</td>
-                            </tr>
-                            <tr>
-                                <td>|</td>
-                                <td>|</td>
-                                <td>|</td>
-                            </tr>
-                            <tr>
-                                <td>|</td>
-                                <td>|</td>
-                                <td>|</td>
-                            </tr>
-                            <tr>
-                                <td>|</td>
-                                <td>|</td>
-                                <td>|</td>
-                            </tr>
-                            <tr>
-                                <td>|</td>
-                                <td>|</td>
-                                <td>|</td>
-                            </tr>
-                            <tr>
-                                <td>|</td>
-                                <td>|</td>
-                                <td>|</td>
-                            </tr>
+                        <tbody id="table3">
                         </tbody>
                     </table>
                 </div>
@@ -163,6 +119,8 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8e46ea59a1.js" crossorigin="anonymous"></script>
+    <script src="./data.js"></script>
+    <script src="./stats.js"></script>
 </body>
 
 </html>

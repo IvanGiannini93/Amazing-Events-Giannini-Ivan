@@ -1,12 +1,18 @@
-let eventsData = data.events;
-console.log(eventsData);
-const id = new URLSearchParams(location.search).get("id");
-console.log(id);
-const card = eventsData.find(elem => elem.id == id);
-console.table(card);
-function showCards(idContainer) {
+let idContainer =  'main-container';
+
+async function getDetails() {
+    let eventsData;
+    eventsData = await getData();
+    cardsData = eventsData.events;
+    const id = new URLSearchParams(location.search).get("id");
+    const card = eventsData.events.find(elem => elem._id == id);
+    showCards(card, idContainer);
+}
+
+function showCards(card, idContainer) {
     const container = document.getElementById(idContainer);
-    let cardAssis = card.assistance ? card.assistance : card.estimate;
+    let cardAENum = card.assistance ? card.assistance : card.estimate;
+    let cardAEStr = card.assistance ? 'Assistance' : 'Estimate';
     container.innerHTML = 
     `<div class="d-flex w-50 contenedor-details p-3">
         <div class="d-flex w-50 contenedor-img">
@@ -19,10 +25,10 @@ function showCards(idContainer) {
             <p>Category: ${card.category}</p>
             <p>Place: ${card.place}.</p>
             <p>Capacity: ${card.capacity}.</p>
-            <p>Assistance : ${cardAssis}.</p>
+            <p>${cardAEStr} : ${cardAENum}.</p>
             <p>Price: $${card.price}.</p>
         </div>
     </div>`
 }
 
-showCards('main-container');
+getDetails();
